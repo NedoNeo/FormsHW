@@ -1,6 +1,5 @@
-image: Ubuntu2204  # образ для сборки
-
-stack: node 20  # окружение
+environment:
+  nodejs_version: "18"
 
 branches:
   only:
@@ -10,7 +9,7 @@ branches:
 cache: node_modules  # кеширование
 
 install:
-  - npm install # команда установки зависимостей
+  - npm install  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
 
@@ -18,20 +17,4 @@ build_script:
   - npm run build   # команда сборки
 
 test_script:
-  - npm lint && npm test  # скрипт тестирования
-
-deploy_script:  # скрипт развёртывания
-  - git config --global credential.helper store
-  - git config --global user.name AppVeyor
-  - git config --global user.email ci@appveyor.com
-  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
-
-
-# version: 1.0.{build}
-# image: Visual Studio 2022
-
-# # Build configuration
-# build_script:
-#   - npm install
-#   - npm run build  # Correct command to run the build script
+  - npm run lint && npm test  # скрипт тестирования
