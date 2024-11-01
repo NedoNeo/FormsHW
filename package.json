@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/malrjane/forms.git"
+    "url": "git+ssh://git@github.com/NedoNeo/FormsHW.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/malrjane/forms/issues"
+    "url": "https://github.com/NedoNeo/FormsHW"
   },
-  "homepage": "https://github.com/malrjane/forms#readme",
+  "homepage": "https://github.com/NedoNeo/FormsHW#readme",
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
